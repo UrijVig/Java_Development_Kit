@@ -164,7 +164,7 @@ public class Map extends JPanel {
                             cellWidth - DOT_PADDING * 2,
                             cellHeight - DOT_PADDING * 2);
                 } else if (field[y][x] == AI_DOT) {
-                    g.setColor(new Color(0xff0000));
+                    g.setColor(new Color(0xFF0000));
                     g.fillOval(x * cellWidth + DOT_PADDING,
                             y * cellHeight + DOT_PADDING,
                             cellWidth - DOT_PADDING * 2,
@@ -180,21 +180,14 @@ public class Map extends JPanel {
 
     private void showMessageGameOver(Graphics g) {
         g.setColor(Color.DARK_GRAY);
-        g.fillRect(0, 200, getWidth(), 700);
+        g.fillRect(0, getHeight() / 2, getWidth(), 70);
         g.setColor(Color.YELLOW);
         g.setFont(new Font("Times new roman", Font.BOLD, 48));
         switch (gameOverType) {
-            case STATE_DRAW:
-                g.drawString(MSG_DRAW, 180, getHeight() / 2);
-                break;
-            case STATE_WIN_HUMAN:
-                g.drawString(MSG_WIN_HUMAN, 70, getHeight() / 2);
-                break;
-            case STATE_WIN_AI:
-                g.drawString(MSG_WIN_AI, 20, getHeight() / 2);
-                break;
-            default:
-                throw new RuntimeException("Unexpected gameOver State: " + gameOverType);
+            case STATE_DRAW -> g.drawString(MSG_DRAW, 180, getHeight() / 2 + 55);
+            case STATE_WIN_HUMAN -> g.drawString(MSG_WIN_HUMAN, 70, getHeight() / 2 + 55);
+            case STATE_WIN_AI -> g.drawString(MSG_WIN_AI, 20, getHeight() / 2 + 55);
+            default -> throw new RuntimeException("Unexpected gameOver State: " + gameOverType);
         }
     }
 
