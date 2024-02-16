@@ -100,6 +100,11 @@ public class ServerWindow extends JFrame {
         }
     }
 
+    /**
+     * Метод сохраняет полученное тесктовое значение в файле истории чата
+     *
+     * @param text полоученное сообщение
+     */
     private void saveMassageInLog(String text) {
         try (FileWriter fw = new FileWriter(HISTORY_PATH,true)) {
             fw.write(text + "\n");
@@ -109,6 +114,11 @@ public class ServerWindow extends JFrame {
         }
     }
 
+    /**
+     * Метот возвращает историю переписки из файла в памяти сервера
+     *
+     * @return строка с перепиской
+     */
     public String getHistory() {
         StringBuilder data = new StringBuilder();
         try (FileReader fr = new FileReader(HISTORY_PATH); BufferedReader bf = new BufferedReader(fr)){

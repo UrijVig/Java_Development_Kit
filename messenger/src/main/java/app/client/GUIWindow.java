@@ -107,6 +107,9 @@ public class GUIWindow extends JFrame {
         JPanel messagePanel = new JPanel(new BorderLayout());
         message = new JTextField();
         JButton btnSend = new JButton("Send");
+        /*
+          Метод устанавливает слушателя клавиатуры, реагирующего на нажатие клавиши Enter
+         */
         message.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
