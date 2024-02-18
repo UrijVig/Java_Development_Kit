@@ -1,4 +1,4 @@
-package two.lesson.java.main.circles;
+package two.lesson.java.main.common;
 
 import two.lesson.java.main.common.Interactable;
 import two.lesson.java.main.common.MainCanvas;
@@ -6,7 +6,7 @@ import two.lesson.java.main.common.Sprite;
 
 import java.awt.*;
 
-public class Background extends Sprite implements Interactable {
+public class Background implements Interactable {
     private float time;
     public static final float AMPLITUDE = 255f / 2f;
     private Color color;
