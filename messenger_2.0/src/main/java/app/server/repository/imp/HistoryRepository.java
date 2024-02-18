@@ -18,7 +18,7 @@ public class HistoryRepository implements HistoryRepositoryInterface {
     @Override
     public void saveMessage(String login, String message) {
         try (FileWriter fw = new FileWriter(server.getRepositoryPath(),true)) {
-            fw.write(message + "\n");
+            fw.write(login + " : " + message + "\n");
         } catch (IOException e) {
             serverController.processLog("Ошибка при сохранении истории! " + e.getMessage());
             e.printStackTrace();
