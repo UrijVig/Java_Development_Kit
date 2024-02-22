@@ -21,7 +21,6 @@ public class EmployeeDirectory {
                 .findFirst().orElse(null);
     }
     public List<String> getPhoneNumberByName(String name){
-
         return employees.stream().filter(employee -> employee.name().equals(name))
                 .map(Employee::phoneNumber).toList();
     }
