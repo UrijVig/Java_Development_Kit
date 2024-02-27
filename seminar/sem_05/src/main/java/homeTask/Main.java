@@ -1,10 +1,7 @@
 package main.java.homeTask;
-
 import java.util.LinkedList;
-
 public class Main {
     private static final  LinkedList<Philosopher> philosophers = new LinkedList<>();
-
     public static void main(String[] args) {
         Philosopher philosopher1 = new Philosopher();
         Philosopher philosopher2 = new Philosopher();
@@ -24,6 +21,5 @@ public class Main {
         for (Philosopher philosopher : philosophers) {
             philosopher.start();
         }
-
     }
 }

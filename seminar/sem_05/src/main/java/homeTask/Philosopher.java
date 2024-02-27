@@ -1,6 +1,5 @@
 package main.java.homeTask;
 
-
 public class Philosopher extends Thread {
     private static int count = 0;
     private final String name;
@@ -9,7 +8,6 @@ public class Philosopher extends Thread {
     private boolean hunger = true;
     private int portionSpaghetti = 3;
     private Philosopher leftNeighbor;
-
 
     public Philosopher() {
         leftNeighbor = null;
