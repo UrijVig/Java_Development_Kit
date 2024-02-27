@@ -21,12 +21,6 @@ public class Philosopher extends Thread {
         return leftFork.pickUp();
     }
 
-    private void putDownForks() {
-        rightFork.putDown();
-        leftFork.putDown();
-        System.out.printf("%s положил вилки %s и %s на место! \n", name, leftFork, rightFork);
-    }
-
     private long getRandomTime() {
         return (long) (Math.random() * 1000 + 500);
     }
